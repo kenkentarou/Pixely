@@ -50,6 +50,7 @@ group :development do
   gem 'better_errors'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'html2slim'
 end
 
 
