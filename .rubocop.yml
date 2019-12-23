@@ -1,4 +1,4 @@
-inherit_from: ..rubocop_todo.yml
+inherit_from: .rubocop_todo.yml
 
 require:
   - rubocop-rails
@@ -38,7 +38,7 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Max: 30
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Metrics/MethodLength:
@@ -79,4 +79,6 @@ Rails/OutputSafety:
     - 'app/helpers/**/*.rb'
 
 Rails/InverseOf:
+  Enabled: false
+Rails/FilePath:
   Enabled: false
