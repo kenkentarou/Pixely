@@ -1,5 +1,5 @@
 {
-  "name": "insta_clone_課題",
-  "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap-material-design": "^4.1.2"
+  }
 }
