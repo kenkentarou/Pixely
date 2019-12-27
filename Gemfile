@@ -35,6 +35,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'faker'
 end
 
 group :development do
@@ -48,6 +49,7 @@ group :development do
   gem 'rubocop-rails'
   gem 'annotate'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'html2slim'
@@ -62,3 +64,5 @@ gem 'rails-i18n', '~> 5.1'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'jquery-rails'
 gem 'popper_js'
+gem 'carrierwave', '~> 2.0'
+
