@@ -27,4 +27,6 @@
 /config/master.key
 /vendor
 /config/database.yml
-.idea
+/public/uploads
+/.idea/
+/.idea/insta_clone_課題.iml
