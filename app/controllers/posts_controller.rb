@@ -50,12 +50,21 @@ class PostsController < ApplicationController
   end
 
   def like_posts
-    @posts = current_user.like_posts.includes(:user).page(params[:page]).order(created_at: :desc).per(10)
+    @posts = current_user.like_posts.includes(:user).page(params[:page]).order(created_at: :desc)
+  end
+
+  def search
+    @search_form = SearchPostsForm.new(search_post_params)
+    @posts = @search_form.search.includes(:user).page(params[:page])
   end
 
   private
 
   def post_params
     params.require(:post).permit(:body, images: [])
+  end
+
+  def search_post_params
+    params.require(:q).permit(:body)
   end
 end
