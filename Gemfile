@@ -66,4 +66,5 @@ gem 'jquery-rails'
 gem 'popper_js'
 gem 'carrierwave', '~> 2.0'
 gem 'kaminari'
+gem 'letter_opener_web'
 
