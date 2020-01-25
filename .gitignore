@@ -31,3 +31,10 @@
 /.idea/
 /.idea/insta_clone_課題.iml
 /dump.rdb
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
