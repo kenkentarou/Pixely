@@ -51,6 +51,7 @@ class PostsController < ApplicationController
 
   def like_posts
     @posts = current_user.like_posts.includes(:user).page(params[:page]).order(created_at: :desc)
+    @users = User.recent(5)
   end
 
   def search
