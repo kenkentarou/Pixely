@@ -26,8 +26,15 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /vendor
-.generators
-.rakeTasks
-/public/
-insta_clone_app.iml
-dump.rdb
+/config/database.yml
+/public/uploads
+/.idea/
+/dump.rdb
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
