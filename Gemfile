@@ -77,4 +77,7 @@ group :test do
   gem 'capybara'
   gem 'webdrivers'
 end
-gem 'pg', group: :production
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+  gem 'fog'
+end
