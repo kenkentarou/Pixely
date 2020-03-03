@@ -1,5 +1,5 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-white
-  = link_to 'InstaClone', root_path, class: 'navbar-brand'
+  = link_to 'Pixely', root_path, class: 'navbar-brand'
   button.navbar-toggler aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarTogglerDemo02" data-toggle="collapse" type="button"
     span.navbar-toggler-icon
   #navbarTogglerDemo02.collapse.navbar-collapse
@@ -8,6 +8,11 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white
       button.btn.btn-outline-success.my-2.my-sm-0 type="submit"  Search
     ul.navbar-nav.mt-2.mt-lg-0
       li.nav-item
-        = link_to 'ポスト一覧', '#', class: 'nav-link'
+        = link_to 'ポスト一覧', posts_path, class: 'nav-link'
       li.nav-item
         = link_to 'ログイン', login_path, class: 'nav-link'
+      li.nav-item
+        = form_with url: login_path, model: @user, local: true do |f|
+          = f.hidden_field :email, {value: 'test@test.jp'}
+          = f.hidden_field :password, {value: 'test1234'}
+          = f.submit "テストユーザーとしてログイン", class: "btn btn-info"
