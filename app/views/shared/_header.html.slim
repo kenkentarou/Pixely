@@ -6,6 +6,8 @@ nav.navbar.navbar-expand-lg.navbar-light.bgcolor
     = render 'posts/search_form', search_form: @search_form
     ul.navbar-nav.mt-2.mt-lg-0
       li.nav-item
+        = link_to 'フォローしたユーザーのポスト一覧', posts_path, class: 'nav-link'
+      li.nav-item
         = link_to 'お気に入り', like_posts_posts_path, class: 'nav-link'
       li.nav-item
         = link_to new_post_path, class: 'nav-link' do
