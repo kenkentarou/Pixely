@@ -9,8 +9,6 @@ class ChatRoomsController < ApplicationController
   def create
     users = User.where(id: params.dig(:chat_room, :user_ids)) + [current_user]
     @chat_room = ChatRoom.chat_room_for_users(users)
-    # @messages = @chat_room.messages.order(created_at: :desc).limit(100).reverse
-    # @chat_room_user = current_user.chat_room_users.find_by(chat_room_id: @chat_room.id)
     redirect_to chat_room_path(@chat_room)
   end
 
@@ -22,6 +20,7 @@ class ChatRoomsController < ApplicationController
   private
 
   def require_user_ids
-    redirect_back(fallback_location: root_path, danger: 'パラメータが不正です') if params.dig(:chat_room, :user_ids).reject(&:blank?).blank?
+    binding.pry
+    redirect_back(fallback_location: root_path, danger: 'チャットの相手を選択してください') if params.dig(:chat_room, :user_ids).reject(&:blank?).blank?
   end
 end
