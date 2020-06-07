@@ -20,7 +20,6 @@ class ChatRoomsController < ApplicationController
   private
 
   def require_user_ids
-    binding.pry
     redirect_back(fallback_location: root_path, danger: 'チャットの相手を選択してください') if params.dig(:chat_room, :user_ids).reject(&:blank?).blank?
   end
 end
