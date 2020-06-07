@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   resources :activities, only: [] do
     patch :read, on: :member
   end
+  resources :chat_rooms, only: %i[index create show], shallow: true do
+    resources :messages
+  end
   namespace :mypage do
     resource :account, only: %i[edit update]
     resources :activities, only: %i[index]

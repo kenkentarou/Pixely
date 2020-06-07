@@ -73,6 +73,7 @@ gem 'config'
 gem 'sidekiq'
 gem 'sinatra'
 gem 'faker'
+gem 'draper'
 group :test do
   gem 'capybara'
   gem 'webdrivers'
