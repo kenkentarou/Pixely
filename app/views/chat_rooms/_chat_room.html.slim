@@ -1,0 +1,6 @@
+.chatroom.mb-3.d-flex
+  = image_tag chat_room.users_excluding(current_user).sample.avatar_url, size: '40x40', class: 'rounded-circle mr-1'
+  div
+    p.font-weight-bold = raw(chat_room.users_excluding(current_user).map { |user| (link_to(user.username, user_path(user)))}.join(','))
+    p.font-weight-light = link_to chat_room.decorate.message_text, chat_room_path(chat_room)
+hr

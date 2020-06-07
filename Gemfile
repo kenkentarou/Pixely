@@ -72,6 +72,7 @@ gem 'kaminari'
 gem 'config'
 gem 'sidekiq'
 gem 'sinatra'
+gem 'draper'
 group :test do
   gem 'capybara'
   gem 'webdrivers'
