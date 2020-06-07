@@ -10,7 +10,7 @@ li.media.mb-3.border-bottom.p-2 id="message-#{message.id}"
       = message.decorate.created_at
     div.text-right
       - if current_user&.own?(message)
-        = link_to message_path(message), class: 'mr-3 delete-button', method: :delete, data: {confirm: '本当に削除しますか？'}, remote: true do
+        = link_to message_path(message), class: 'mr-3 delete_button', method: :delete, data: {confirm: '本当に削除しますか？'}, remote: true do
           = icon 'far', 'trash-alt', class: 'fa-sm'
         = link_to edit_message_path(message), class: 'edit_button', remote: true do
           = icon 'far', 'edit', class: 'fa-sm'
